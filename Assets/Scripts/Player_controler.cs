@@ -14,7 +14,7 @@ public class Player_controler : MonoBehaviour
     public Animator throwingArrowAnim;
 
     public Rigidbody[] balls;
-
+   
 
     private float horizontalInput;
     private Vector3 ballOffset;
@@ -26,15 +26,15 @@ public class Player_controler : MonoBehaviour
     {
         ballOffset = ballSpawnPoint.position - throwingArrow.position;
        
-        StartThrow();
+        //StartThrow();
     }
-    private void StartThrow()
+    public void StartThrow()
     {
         throwingArrowAnim.SetBool("Aiming", true);
         wasBallThrown = false;
 
         int randomNumber = GetRandomNumber(0,balls.Length);
-        selectedBall = Instantiate(balls[randomNumber],ballSpawnPoint.position,Quaternion.identity);
+        selectedBall = Instantiate(balls[randomNumber],ballSpawnPoint.position, Quaternion.identity);
 
     }
 
