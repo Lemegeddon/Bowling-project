@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     private Player_controler player_Controler;
 
     [SerializeField]
+    private scoreManager scoreManager;
+
+    [SerializeField]
     private Pin[] pins;
 
     private bool isGamePlaying = false; 
@@ -19,8 +22,10 @@ public class GameManager : MonoBehaviour
 
     public void startGame()
     {
-        isGamePlaying = true;   
-        SetNextThrow();
+        isGamePlaying = true;
+        
+        //Get First Throw
+        player_Controler.StartThrow();
     } 
     // Update is called once per frame
     void Update()
@@ -33,14 +38,31 @@ public class GameManager : MonoBehaviour
 
     public void SetNextThrow()
     {
-        CalculateFallenPins();
-        //Get the ball to the start position for throwing
 
-        player_Controler.StartThrow();
+        Invoke(nameof(nextThrow), 3.0f);
+
+        
 
     }
 
-    public void CalculateFallenPins()
+    void nextThrow()
+    {
+        if (scoreManager.currentFrame == 0)
+        {
+            Debug.Log($"Game over{scoreManager.CalculateTotalScore()}");
+        }
+        else
+        {
+            Debug.Log($"Frame: {scoreManager.currentFrame}, Throw: {scoreManager.currentThrow}");
+            scoreManager.SetFrameScore(CalculateFallenPins());
+            Debug.Log($"Current Score: {scoreManager.CalculateTotalScore()}");
+            CalculateFallenPins();
+            //Get the ball to the start position for throwing
+            player_Controler.StartThrow();
+        }
+
+    }
+    public int CalculateFallenPins()
     {
         int count = 0;
         foreach (Pin pin in pins)
@@ -48,11 +70,22 @@ public class GameManager : MonoBehaviour
             if (pin.isFallen)
             {
                 count++;
+                pin.gameObject.SetActive(false);
             }
         }
         
         Debug.Log("Total Fallen Pins" + count);
+        return count;
+    }
 
+    public void ResetAllPins()
+    {
+        foreach(Pin pin in pins)
+        {
+            pin.ResetPin();
+        }
+
+        
     }
 
 }
