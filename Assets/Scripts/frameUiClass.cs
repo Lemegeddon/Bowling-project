@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SocialPlatforms.Impl;
+using UnityEditor.Experimental.GraphView;
 
 public class frameUiClass : MonoBehaviour
 {
@@ -14,18 +14,90 @@ public class frameUiClass : MonoBehaviour
     int frameScore = 0;
     public void UpdateScore(int throwNumber, int score)
     {
-        if(throwNumber == 1)
+        if (!isFinalFrame)
         {
-            if(score == 10)
+            if (throwNumber == 1)
             {
-                txtThrow1.text = "";
-                txtThrow2.text = "x";
+                if (score == 10)
+                {
+                    txtThrow1.text = "";
+                    txtThrow2.text = "x";
+                }
+                else
+                {
+                    txtThrow1.text = score.ToString();
+                    frameScore += score;
+                }
             }
-            else
+            else if (throwNumber == 2)
             {
-                txtThrow1.text = score.ToString();
                 frameScore += score;
+                if (frameScore == 10)
+                {
+                    txtThrow2.text = "/";
+                }
+                else
+                {
+                    txtThrow1.text = score.ToString();
+
+                }
             }
         }
+        else
+        {
+            if (throwNumber == 1)
+            {
+                if (score == 10)
+                {
+                    txtThrow1.text = "X";
+                }
+                else
+                {
+                    txtThrow1.text = score.ToString();
+                    frameScore += score;
+                }
+            }
+            else if (throwNumber == 2)
+            {
+                frameScore += score;
+                if (frameScore == 10)
+                {
+                    txtThrow2.text = "/";
+                }
+                else
+                {
+                    txtThrow2.text = score.ToString();
+
+                }
+            }
+            else if (throwNumber == 3)
+            {
+                //if (score == 10)
+                //{
+                //    txtThrow3.text = "x";
+                //}
+                //else
+                //{
+                //    txtThrow3.text = score.ToString();
+                //}
+
+                txtThrow3.text = score == 10? "X" : score.ToString();
+            }
+        }  
+    }
+    public void updateTotale(int total)
+    {
+        txtTotal.text = total.ToString();
+    }
+    public void setFame(int toal)
+    {
+        txtFrame.text = toal.ToString();
+        txtThrow1.text = "";
+        txtThrow2.text = "";
+        txtTotal.text = "";
+
+        if (isFinalFrame)
+            txtThrow3.text = "";
+        
     }
 }
