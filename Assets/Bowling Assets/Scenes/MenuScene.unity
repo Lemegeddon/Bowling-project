@@ -1675,7 +1675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press A to move Left and D to move Right Hit Space to throw Ball
+  m_text: Press A to move Left, and D to move Right, Hit Space to throw Ball.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3001,7 +3001,7 @@ Transform:
   m_GameObject: {fileID: 7037272519899884505}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23079112, y: 0.035564702, z: -0.14809075, w: 0.9610098}
-  m_LocalPosition: {x: 0.2256, y: 0, z: -0.234}
+  m_LocalPosition: {x: 0.24, y: 0.007, z: -0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
