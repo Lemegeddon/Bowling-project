@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Bowling Assets/Scenes/MenuScene.unity
+    guid: b668d4fbb76e6bf44a76abdc95451595
+  - enabled: 1
+    path: Assets/Bowling Assets/Scenes/BowlingDemo.unity
+    guid: 7ffd8fb694e4dd84aa0981eb2c0ce984
+  - enabled: 1
+    path: Assets/Bowling Assets/Scenes/CreditsScene.unity
+    guid: dcb9ea72599d1524c8826650b62c819f
   m_configObjects: {}

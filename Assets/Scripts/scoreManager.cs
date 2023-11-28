@@ -14,7 +14,7 @@ public class scoreManager : MonoBehaviour
 
     private int[] frames = new int[10];
 
-    private bool isSpare  = false;
+    private bool isSpare = false;
     private bool isStrike = false;
 
     private void Start()
@@ -71,9 +71,10 @@ public class scoreManager : MonoBehaviour
             if (frames[currentFrame - 1] == 10)
             {
                if(currentFrame == 10)
-                {
+               {
                     currentThrow++;
-                }
+                
+               }
                 else
                 {
                     isSpare = true;
