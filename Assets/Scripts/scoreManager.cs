@@ -90,7 +90,7 @@ public class scoreManager : MonoBehaviour
                 {
                     //End all throws 
                     currentThrow = 0;
-                    currentThrow = 0;
+                    currentFrame = 0;
                     return;
                 }
                 else
