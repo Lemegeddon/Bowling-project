@@ -536,6 +536,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1014821328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &572034721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572034722}
+  - component: {fileID: 572034723}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &572034722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572034721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 981172956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572034723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572034721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897bd51514cc64f4da31bfde17bd1c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameHolder: {fileID: 1222219573}
+  messageUIStrike: {fileID: 1065180986}
+  messageUISpare: {fileID: 1784440350}
+  gameOverUI: {fileID: 21697527}
+  scoreText: {fileID: 1374760051}
 --- !u!1 &577050798
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_Controler: {fileID: 986667136}
   scoreManager: {fileID: 1567199382}
+  UIManager: {fileID: 572034723}
   pins:
   - {fileID: 1353688562}
   - {fileID: 280058285}
@@ -1014,6 +1064,7 @@ Transform:
   - {fileID: 986667137}
   - {fileID: 584190462}
   - {fileID: 1567199381}
+  - {fileID: 572034722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986667135
@@ -1387,6 +1438,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!224 &1222219573 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 416142914558261981, guid: d84d6a4b5dd08fb46b0b11b7c0db0a80,
+    type: 3}
+  m_PrefabInstance: {fileID: 2957964357087476605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1286152304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,6 +1783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 584190461}
+  UIManager: {fileID: 572034723}
 --- !u!1 &1613496861
 GameObject:
   m_ObjectHideFlags: 0

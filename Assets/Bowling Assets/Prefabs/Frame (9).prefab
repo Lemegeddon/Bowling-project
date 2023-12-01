@@ -93,11 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73adb801294befe459ecf30d1013abb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtFrame: {fileID: 0}
-  txtThrow1: {fileID: 0}
-  txtThrow2: {fileID: 0}
-  txtThrow3: {fileID: 0}
-  txtTotal: {fileID: 0}
+  txtFrame: {fileID: 5578589701516512912}
+  txtThrow1: {fileID: 3894303121709523586}
+  txtThrow2: {fileID: 2359349190453576452}
+  txtThrow3: {fileID: 4509256717496394423}
+  txtTotal: {fileID: 3293945915239681254}
   isFinalFrame: 0
 --- !u!1 &5127699014477502525
 GameObject:

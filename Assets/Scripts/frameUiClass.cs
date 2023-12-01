@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
+
 
 public class frameUiClass : MonoBehaviour
 {
@@ -89,9 +89,9 @@ public class frameUiClass : MonoBehaviour
     {
         txtTotal.text = total.ToString();
     }
-    public void setFame(int toal)
+    public void SetFrame(int total)
     {
-        txtFrame.text = toal.ToString();
+        txtFrame.text = total.ToString();
         txtThrow1.text = "";
         txtThrow2.text = "";
         txtTotal.text = "";
